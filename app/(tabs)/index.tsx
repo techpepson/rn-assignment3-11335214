@@ -4,7 +4,7 @@ import {
   Image,
   KeyboardAvoidingView,
   Platform,
-  SectionList,
+  ScrollView,
   StyleSheet,
   Text,
   TextInput,
@@ -17,59 +17,278 @@ import { sectionItems } from "@/global-exports/sectionList";
 const Index = () => {
   return (
     //Main view component that wraps the other components
-    <>
-      <View>
-        {/*The view component that wraps the column section of the views in the heading*/}
-        <View>
-          <Text>Hello, Devs</Text>
-          <Text>14 Tasks today</Text>
+    <View style={{ backgroundColor: "#fef3c7" }}>
+      <ScrollView>
+        <View style={styles.headerContentAlign}>
+          {/*The view component that wraps the column section of the views in the heading*/}
+          <View style={styles.columnFlex}>
+            <Text style={styles.headerStyle}>Hello, Devs</Text>
+            <Text>14 Tasks today</Text>
+          </View>
+          <Image source={profile} style={styles.profileImageSize} />
         </View>
-        <Image source={profile} style={{ alignSelf: "center" }} />
-      </View>
-      {/*the search bar component*/}
-      <View>
-        <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : "height"}
-        >
-          <TextInput
-            placeholder="Search"
-            style={{
-              borderWidth: 1,
-              borderColor: "black",
-              padding: 8,
-              margin: 10,
-            }}
-          />
-        </KeyboardAvoidingView>
-      </View>
-      <View>
-        <FlatList
-          data={flatListItems}
-          keyExtractor={(item) => item.id}
-          renderItem={({ item }) => (
-            <View>
-              <Text>{item.taskTitle}</Text>
-              <Text>{item.taskQuantity}</Text>
-              <Image source={item.image} />
-            </View>
-          )}
-        />
-        {/*ongoing task view*/}
+        {/*the search bar component*/}
         <View>
-          <Text>Ongoing Tasks</Text>
+          <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "height" : "padding"}
+          >
+            <View
+              style={[{ backgroundColor: "#fef3c7" }, { borderRadius: 10 }]}
+            >
+              <TextInput
+                placeholder="Search"
+                placeholderTextColor={"#000000"}
+                style={{
+                  borderWidth: 1,
+                  borderColor: "black",
+                  padding: 8,
+                  margin: 10,
+                }}
+              />
+            </View>
+          </KeyboardAvoidingView>
+        </View>
+        {/*component of the FlatList of the categories*/}
+        <View>
+          {/*FlatList container*/}
           <View>
             <FlatList
-              data={sectionItems}
-              keyExtractor={(items) => items.sectionItem}
-              renderItem={({ item }) => <Text>{item.sectionItem}</Text>}
-            ></FlatList>
+              data={flatListItems}
+              keyExtractor={(item, index) => item.id}
+              renderItem={({ item }) => (
+                <View style={styles.imageViewContainer}>
+                  {/*FlatList first image container*/}
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle1}</Text>
+                      <Text>{item.taskQuantity1}</Text>
+                    </View>
+                    <Image source={item.image1} style={styles.imageSize} />
+                  </View>
+                  {/*FlatList second image container*/}
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                  <View style={{ backgroundColor: "#fef3c7" }}>
+                    <View style={styles.miniTextContainer}>
+                      <Text style={styles.mediumSize}>{item.taskTitle2}</Text>
+                      <Text>{item.taskQuantity2}</Text>
+                    </View>
+                    <Image source={item.image2} style={styles.imageSize} />
+                  </View>
+                </View>
+              )}
+              ListHeaderComponent={
+                <Text style={{ fontSize: 20, fontWeight: 700, lineHeight: 24 }}>
+                  Categories
+                </Text>
+              }
+            />
+          </View>
+          {/*ongoing task view*/}
+          <View>
+            <Text
+              style={{
+                fontSize: 20,
+                fontWeight: 700,
+                lineHeight: 24,
+                marginTop: 20,
+              }}
+            >
+              Ongoing Tasks
+            </Text>
+            <View style={styles.centerList}>
+              <FlatList
+                data={sectionItems}
+                keyExtractor={(items) => items.id}
+                renderItem={({ item }) => (
+                  <View style={styles.listContainer}>
+                    <Text style={[styles.mediumSize, styles.leftText]}>
+                      {item.sectionItem}
+                    </Text>
+                  </View>
+                )}
+              ></FlatList>
+            </View>
           </View>
         </View>
-      </View>
-    </>
+      </ScrollView>
+    </View>
   );
 };
 
 export default Index;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  headerContentAlign: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+
+  listContainer: {
+    width: 354,
+    height: 128,
+    borderRadius: 15,
+    borderWidth: 1,
+    left: 10,
+    justifyContent: "center",
+  },
+
+  leftText: {
+    left: 50,
+    fontSize: 23,
+  },
+  centerList: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 10,
+    gap: 20,
+  },
+
+  boldFont: {
+    fontFamily: "Roboto-Bold",
+  },
+
+  imageViewContainer: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 40,
+    flexWrap: "wrap",
+    left: 1,
+    top: 10,
+  },
+  lightFont: {
+    fontFamily: "Roboto-Light",
+  },
+
+  miniTextContainer: {
+    display: "flex",
+    flexDirection: "column",
+    width: 80,
+    height: 35,
+    left: 20,
+  },
+
+  imageSize: {
+    width: 151,
+    height: 132,
+    left: 41,
+  },
+
+  headerStyle: {
+    fontFamily: "Roboto-Bold",
+    fontWeight: "bold",
+    fontSize: 32,
+    lineHeight: 38.4,
+  },
+  smallSize: {
+    fontSize: 12,
+  },
+  mediumSize: {
+    fontSize: 17,
+    fontWeight: "bold",
+  },
+  largeFont: {
+    fontSize: 24,
+  },
+  titleTask: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 1,
+    justifyContent: "flex-start",
+  },
+  columnFlex: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 3,
+  },
+  searchContainer: {
+    display: "flex",
+    flexDirection: "row",
+    gap: 5,
+    backgroundColor: "#fffbeb",
+  },
+  searchInput: {
+    borderWidth: 1,
+    borderColor: "black",
+    padding: 8,
+    margin: 10,
+    borderRadius: 10,
+  },
+  flatListImage: {
+    width: 186,
+    height: 192,
+    top: 249,
+    left: 20,
+    borderRadius: 15,
+  },
+  flatListContainer: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 5,
+  },
+  ongoingTasks: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 10,
+  },
+  ongoingTasksTitle: {
+    fontSize: 20,
+  },
+  ongoingTasksList: {
+    display: "flex",
+    flexDirection: "column",
+    gap: 5,
+  },
+  ongoingTasksItem: {
+    fontSize: 15,
+  },
+  profileImageSize: {
+    width: 46,
+    height: 45,
+    borderRadius: 306,
+  },
+});

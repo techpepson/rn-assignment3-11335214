@@ -1,16 +1,25 @@
 //image and texts to be mapped on by flatlist
 
-export const flatListItems = [
+import { ImageSourcePropType } from "react-native";
+
+interface FlatTypes {
+  taskTitle1: string;
+  taskQuantity1: string;
+  image1: ImageSourcePropType;
+  id: string;
+  taskTitle2: string;
+  taskQuantity2: string;
+  image2: ImageSourcePropType;
+}
+
+export const flatListItems: FlatTypes[] = [
   {
-    taskTitle: "Exercise",
-    taskQuantity: "12 Tasks",
-    image: require("../assets/images/meditate-woman.png"),
-    id: 1,
-  },
-  {
-    taskTitle: "Work",
-    taskQuantity: "8 Tasks",
-    image: require("../assets/images/learningMan.png"),
-    id: 2,
+    taskTitle1: "Exercise",
+    taskQuantity1: "12 Tasks",
+    image1: require("../assets/images/meditate-woman.png"),
+    id: "1",
+    taskTitle2: "Study",
+    taskQuantity2: "12 Tasks",
+    image2: require("../assets/images/learningMan.png"),
   },
 ];
