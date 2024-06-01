@@ -1,3 +1,7 @@
+![screenshot4](https://github.com/techpepson/rn-assignment3-11335214/assets/124635484/d099cb87-9cd2-42d4-9813-1b4909c731ee)
+![screenshot3](https://github.com/techpepson/rn-assignment3-11335214/assets/124635484/d180a0cd-2ae4-4c07-8b9c-db32b61fda78)
+![screenshot2](https://github.com/techpepson/rn-assignment3-11335214/assets/124635484/ffc80b69-be11-438d-b18e-89d7b50c5dcb)
+![screenshot1](https://github.com/techpepson/rn-assignment3-11335214/assets/124635484/83e73f4b-aa1c-4a6f-9856-e6e15384b62f)
 <<<<<<< HEAD
 
 # Welcome to your Expo app 👋
