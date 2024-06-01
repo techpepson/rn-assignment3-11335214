@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+
 # Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
@@ -48,8 +49,24 @@ To learn more about developing your project with Expo, look at the following res
 Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-=======
+- # [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
 # rn-assignment3-11335214
+
 A repository of the mobile app in assignment 3
->>>>>>> 105bf6d676bdccaf319daf710a31c6ece7b8886f
+
+> > > > > > > 105bf6d676bdccaf319daf710a31c6ece7b8886f
+
+# Student ID
+11335214
+
+# Description of components
+
+- FlatList: In the project, have a FlatList that I use to map over data elements in an array. These elements in the array get mapped over and rendered as a list. This component takes in some props such as data(the data elements to render in the list), keyExtractor(this is a key that is associated to each data item to set it up for mapping), renderItem(this is a prop that actually performs the mapping of the data elements). Other props exist though, but I would like to talk about these for now.
+- SafeAreaView: This is a component that helps to align the elements in the app or the components in the array rightly with the mobile screen. It displays elements in a safe area on the screen to prevent them from overlapping with some already existing parts of a screen such as the status bar.
+- ScrollView: The ScrollView component is a component that enables auto scrolling when the elements of the screen exceed the normal height of the screen. Without it, scrolling will not be possible.
+- Image: The Image component is a component that is used to render images. This is similar to the img tag in html. The Image takes in a source prop that is the source of the image to render.
+- Text: The Text component is used to render normal text elements.
+- TextInput: The TextInput component is used to render elements that take in user inputs.
+- View: The View is one primary component that wraps other components as a container.
+- KeyboardAvoidingView: This is a component that is used to prevent the keyboard from interrupting with other views when invoked.

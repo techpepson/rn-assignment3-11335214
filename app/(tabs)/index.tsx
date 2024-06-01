@@ -9,12 +9,13 @@ import {
   Text,
   TextInput,
   View,
-  StatusBar
+  StatusBar,
 } from "react-native";
 import { profile } from "@/public/imageExport";
 import { flatListItems } from "@/global-exports/flat-list-items";
 import { sectionItems } from "@/global-exports/sectionList";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { SearchBar } from "react-native-screens";
 
 const Index = () => {
   return (
@@ -48,6 +49,7 @@ const Index = () => {
                   margin: 10,
                 }}
               />
+              <SearchBar/>
             </View>
           </KeyboardAvoidingView>
         </View>
