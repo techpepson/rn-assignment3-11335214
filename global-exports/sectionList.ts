@@ -20,43 +20,43 @@ export const sectionItems = [
     id: "6",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Coding",
     id: "7",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Singing",
     id: "8",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Listen to music",
     id: "9",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Dance",
     id: "10",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Link up",
     id: "11",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Attend Meeting",
     id: "12",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Play soccer game",
     id: "13",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Dine",
     id: "14",
   },
   {
-    sectionItem: "Push Ups",
+    sectionItem: "Nothing to do",
     id: "15",
   },
   {
-    sectionItem: "Train",
+    sectionItem: "Training",
     id: "16",
   },
 ];
