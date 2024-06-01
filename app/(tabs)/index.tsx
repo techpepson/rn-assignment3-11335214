@@ -9,15 +9,18 @@ import {
   Text,
   TextInput,
   View,
+  StatusBar
 } from "react-native";
 import { profile } from "@/public/imageExport";
 import { flatListItems } from "@/global-exports/flat-list-items";
 import { sectionItems } from "@/global-exports/sectionList";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Index = () => {
   return (
     //Main view component that wraps the other components
-    <View style={{ backgroundColor: "#fef3c7" }}>
+    <SafeAreaView style={{ backgroundColor: "#fef3c7" }}>
+      <StatusBar barStyle="light-content" />
       <ScrollView>
         <View style={styles.headerContentAlign}>
           {/*The view component that wraps the column section of the views in the heading*/}
@@ -152,7 +155,7 @@ const Index = () => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </SafeAreaView>
   );
 };
 
@@ -173,6 +176,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     left: 10,
     justifyContent: "center",
+    gap: 10,
   },
 
   leftText: {
@@ -184,7 +188,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginTop: 10,
-    gap: 20,
+    gap: 10,
   },
 
   boldFont: {
@@ -249,6 +253,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: 5,
     backgroundColor: "#fffbeb",
+    borderRadius: 20,
   },
   searchInput: {
     borderWidth: 1,
