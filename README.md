@@ -8,6 +8,9 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+# App directory
+- In the app, you can find my work by going to the app folder inside the work, then navigate to tabs, and then index.ts, that is where my work is.
+
 ## Get started
 
 1. Install dependencies
